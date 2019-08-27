@@ -1,0 +1,391 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Aug 16 16:56:11 2019
+# Process ID: 15376
+# Current directory: C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.runs/synth_1/top.vds
+# Journal file: C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15272 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 343.609 ; gain = 94.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:23]
+INFO: [Synth 8-6157] synthesizing module 'contar' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:42]
+	Parameter constantNumber bound to: 25000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'contar' (1#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:42]
+INFO: [Synth 8-6157] synthesizing module 'show' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:74]
+INFO: [Synth 8-6157] synthesizing module 'bcd' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'bcd' (2#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:108]
+INFO: [Synth 8-6157] synthesizing module 'bcdto7segmentclocked' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:153]
+INFO: [Synth 8-6157] synthesizing module 'bcdto7segment_dataflow' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'bcdto7segment_dataflow' (3#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:173]
+INFO: [Synth 8-6157] synthesizing module 'mux16to4' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:199]
+INFO: [Synth 8-226] default block is never used [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:209]
+INFO: [Synth 8-6155] done synthesizing module 'mux16to4' (4#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:199]
+INFO: [Synth 8-6157] synthesizing module 'demux4to1' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:219]
+INFO: [Synth 8-226] default block is never used [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'demux4to1' (5#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:219]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (6#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:236]
+INFO: [Synth 8-6157] synthesizing module 'ClkDivider' [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:253]
+	Parameter constantNumber bound to: 50000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClkDivider' (7#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'bcdto7segmentclocked' (8#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:153]
+INFO: [Synth 8-6155] done synthesizing module 'show' (9#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:74]
+WARNING: [Synth 8-3848] Net L in module/entity top does not have driver. [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/sources_1/new/PruebaContador.v:23]
+WARNING: [Synth 8-3331] design top has unconnected port L[15]
+WARNING: [Synth 8-3331] design top has unconnected port L[14]
+WARNING: [Synth 8-3331] design top has unconnected port L[13]
+WARNING: [Synth 8-3331] design top has unconnected port L[12]
+WARNING: [Synth 8-3331] design top has unconnected port L[11]
+WARNING: [Synth 8-3331] design top has unconnected port L[10]
+WARNING: [Synth 8-3331] design top has unconnected port L[9]
+WARNING: [Synth 8-3331] design top has unconnected port L[8]
+WARNING: [Synth 8-3331] design top has unconnected port L[7]
+WARNING: [Synth 8-3331] design top has unconnected port L[6]
+WARNING: [Synth 8-3331] design top has unconnected port L[5]
+WARNING: [Synth 8-3331] design top has unconnected port L[4]
+WARNING: [Synth 8-3331] design top has unconnected port L[3]
+WARNING: [Synth 8-3331] design top has unconnected port L[2]
+WARNING: [Synth 8-3331] design top has unconnected port L[1]
+WARNING: [Synth 8-3331] design top has unconnected port L[0]
+WARNING: [Synth 8-3331] design top has unconnected port down
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 399.148 ; gain = 149.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 399.148 ; gain = 149.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 399.148 ; gain = 149.941
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/constrs_1/new/const_Contador1.xdc]
+Finished Parsing XDC File [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/constrs_1/new/const_Contador1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.srcs/constrs_1/new/const_Contador1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 733.363 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 733.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 733.367 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 733.367 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 30    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 22    
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module contar 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module bcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 30    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 22    
+Module mux16to4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module demux4to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 4     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module ClkDivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "contar/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "show/bcdto7segmentclocked/ClkDivider/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "show/bcdto7segmentclocked/ClkDivider/clk_div" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design top has unconnected port L[15]
+WARNING: [Synth 8-3331] design top has unconnected port L[14]
+WARNING: [Synth 8-3331] design top has unconnected port L[13]
+WARNING: [Synth 8-3331] design top has unconnected port L[12]
+WARNING: [Synth 8-3331] design top has unconnected port L[11]
+WARNING: [Synth 8-3331] design top has unconnected port L[10]
+WARNING: [Synth 8-3331] design top has unconnected port L[9]
+WARNING: [Synth 8-3331] design top has unconnected port L[8]
+WARNING: [Synth 8-3331] design top has unconnected port L[7]
+WARNING: [Synth 8-3331] design top has unconnected port L[6]
+WARNING: [Synth 8-3331] design top has unconnected port L[5]
+WARNING: [Synth 8-3331] design top has unconnected port L[4]
+WARNING: [Synth 8-3331] design top has unconnected port L[3]
+WARNING: [Synth 8-3331] design top has unconnected port L[2]
+WARNING: [Synth 8-3331] design top has unconnected port L[1]
+WARNING: [Synth 8-3331] design top has unconnected port L[0]
+WARNING: [Synth 8-3331] design top has unconnected port down
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 733.367 ; gain = 484.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:06 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    20|
+|3     |LUT1   |     4|
+|4     |LUT2   |    39|
+|5     |LUT3   |     4|
+|6     |LUT4   |    17|
+|7     |LUT5   |    47|
+|8     |LUT6   |    41|
+|9     |FDCE   |    80|
+|10    |IBUF   |     4|
+|11    |OBUF   |    11|
+|12    |OBUFT  |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+---------------------+------+
+|      |Instance                 |Module               |Cells |
++------+-------------------------+---------------------+------+
+|1     |top                      |                     |   284|
+|2     |  contar                 |contar               |   160|
+|3     |  show                   |show                 |    92|
+|4     |    bcdto7segmentclocked |bcdto7segmentclocked |    92|
+|5     |      ClkDivider         |ClkDivider           |    82|
+|6     |      counter            |counter              |    10|
++------+-------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 748.762 ; gain = 499.555
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 748.762 ; gain = 165.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:10 . Memory (MB): peak = 748.762 ; gain = 499.555
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 749.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:15 . Memory (MB): peak = 749.754 ; gain = 500.547
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 749.754 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Contador1/Contador1.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 16:57:42 2019...
