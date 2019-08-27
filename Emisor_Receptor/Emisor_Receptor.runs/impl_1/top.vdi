@@ -316,3 +316,143 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Checksum: PlaceDB: 4c56d733 ConstDB: 0 ShapeSum: 20ba8c9a RouteDB: 0
 
 Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 69e7a8f8
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1315.621 ; gain = 120.930
+Post Restoration Checksum: NetGraph: 6f592cc NumContArr: 62f2162c Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 69e7a8f8
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1321.613 ; gain = 126.922
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 69e7a8f8
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1321.613 ; gain = 126.922
+ Number of Nodes with overlaps = 0
+Phase 2 Router Initialization | Checksum: 138efa9b7
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 1324.605 ; gain = 129.914
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 147e2317f
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 1324.656 ; gain = 129.965
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+Phase 4 Rip-up And Reroute | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+Phase 6 Post Hold Fix | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00701587 %
+  Global Horizontal Routing Utilization  = 0.0118428 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 8.10811%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 10.8108%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 11.7647%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 7.35294%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1324.656 ; gain = 129.965
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 365c3c24
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1326.664 ; gain = 131.973
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 4693bddd
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:11 . Memory (MB): peak = 1326.664 ; gain = 131.973
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:11 . Memory (MB): peak = 1326.664 ; gain = 131.973
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 6 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 1326.664 ; gain = 131.973
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1326.664 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.211 . Memory (MB): peak = 1326.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1326.664 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Emisor_Receptor/Emisor_Receptor.runs/impl_1/top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Emisor_Receptor/Emisor_Receptor.runs/impl_1/top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/llaaj/OneDrive/Documentos/GitHub/Arqui2/Emisor_Receptor/Emisor_Receptor.runs/impl_1/top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
