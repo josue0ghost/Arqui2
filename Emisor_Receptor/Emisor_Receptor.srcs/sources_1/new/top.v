@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 26.08.2019 19:53:49
+// Create Date: 27.08.2019 16:43:52
 // Design Name: 
 // Module Name: top
 // Project Name: 
@@ -18,55 +18,103 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
 module top(
-    input [3:0] pmod,    
+    input [2:0] pmod,    
     output [3:0] anode,
-    output [6:0] seg
+    output [6:0] seg,
+    output reg [2:0] leds
     );
     
-    wire [12:0] numero;
-    wire suma, resta;
+    reg [12:0] numero;
     
-//    ands ands(.a(pmod[0]), .b(pmod[1]), .c(pmod[2]), .suma(suma), .resta(resta));
-    up up(.suma(pmod[0]), .resta(pmod[2]), .numero(numero));
-//    down down(.resta(resta), .numero(numero));
+    reg p1, p2, p3;
+    
+    always @ (pmod)
+    begin
+        if(pmod[0] == 1'b0)
+        begin
+            p1 <= 1'b1;
+            leds[0] <= 1'b1;
+            p3 <= 1'b0;
+            leds[2] <= 1'b0;
+        end
+        
+        if(pmod[2] == 1'b0)
+        begin
+            p3 <= 1'b1;
+            leds[2] <= 1'b1;
+            p1 <= 1'b0;
+            leds[0] <= 1'b0;
+        end
+        
+        if(pmod[1] == 1'b0)
+        begin
+            leds[1] <= 1'b1;
+            if(p1)
+            begin
+                numero = numero + 1;
+                p1 <= 1'b0;
+                leds[0] <= 1'b0;
+                leds[1] <= 1'b0;
+                leds[2] <= 1'b0;
+            end
+            else if(p3)
+            begin
+                numero = numero - 1;
+                p3 <= 1'b0;
+                leds[0] <= 1'b0;
+                leds[1] <= 1'b0;
+                leds[2] <= 1'b0;
+            end
+        end
+    end
+//    wire [12:0] numero;
+//    wire suma, resta;
+//    wire a, c;
+    
+//    assign_regs assign_regs(.a(pmod[0]), .c(pmod[2]), .areg(a), .creg(c));
+//    ands ands(.a(a), .b(pmod[1]), .c(c), .suma(suma), .resta(resta));
+//    up up(.suma(suma), .resta(resta), .numero(numero));
     show show(.number(numero), .anode(anode), .seg(seg));
 endmodule
 
-//module rst(
-//    input sum, res,
-//    output reg suma, resta
-//    );
+module assign_regs(
+    input a, c,
+    output reg areg, creg
+    );
     
-//    always @(sum, res)
-//    begin
-//        suma <= sum;
-//        resta <= res;
-//    end
-//endmodule
+    always @ (a, c)
+    begin
+        if(a)
+        begin
+            #10 areg <= a;
+            #10 creg <= 1'b0;
+        end
+        else if(c)
+        begin
+            #10 areg <= 1'b0;
+            #10 creg <= c;
+        end
+    end
+endmodule
 
 module ands(
     input a, b, c,
-    output suma, resta
+    output reg suma, resta
     );
-    
-    assign suma = a;
-    assign resta = c;
-//    always @(a, c)
-//    begin
-//        if(a == 1'b1)
-//        begin
-//            suma <= 1'b1;
-//            resta <= 1'b0;
-//        end
-//        else if(c == 1'b1)
-//        begin          
-//            resta <= 1'b1;
-//            suma <= 1'b0;          
-//        end
-//    end
+    always @(b)
+    begin
+        if(a & b)
+        begin
+            #10 suma <= a;
+            #10 resta <= 1'b0;
+        end
+        if(c & b)
+        begin          
+            #10 resta <= 1'b1;
+            #10 suma <= 1'b0;          
+        end
+    end
 endmodule
 
 module up (
@@ -78,28 +126,55 @@ module up (
         begin
             if (resta == 1'b1)
             begin
-                numero = numero - 12'b000000000001;
+                numero = numero - 1;
 //                nsuma <= ~suma;
             end
             if (suma == 1'b1)
             begin
-                numero = numero + 12'b000000000001;
+                numero = numero + 1;
 //                nresta <= ~resta;
             end
         end
 endmodule
 
-//module down (
-//    input resta,
-//    output reg [12:0] numero
-//    );
-      
-//    always @ (posedge(resta))
-//        begin
-//            if (resta == 1'b1)
-//                numero <= numero - 1;
-//        end
-//endmodule
+module cuenta(
+    input [2:0] pmod,
+    output reg [12:0] count
+    );
+    reg a;
+    reg b;
+    reg c;
+    
+    always @(posedge pmod)
+    begin
+        if (pmod[0])
+            begin
+            #10 a = 1'b1;
+            #10 c = 1'b0;
+            end
+        if (pmod[1])
+            #10 b = 1'b1;
+        if(a & b)
+            begin
+            #10 count = count + 13'b1;
+            #10 a = 1'b0;
+            #10 b = 1'b0;
+            #10 c = 1'b0;
+            end
+        if(c & b)
+            begin
+            #10 count = count - 13'b1;
+            #10 a = 1'b0;
+            #10 b = 1'b0;
+            #10 c = 1'b0;
+            end
+        if (pmod[2])
+            begin
+            #10 c = 1'b1;
+            #10 a = 1'b0;
+            end 
+    end
+endmodule 
 
 module show(
     //input [3:0] A, B, C, D,
